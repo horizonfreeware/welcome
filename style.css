@@ -15,9 +15,13 @@ body {
     margin: 10px 100px;
 }
 
+h2 {
+    text-align: center;
+}
+
 section {
     padding: 20px;
-    border: solid white 2px;
+    border: solid #FF4F00 2px;
     background: #808080;
     margin: 10px;
     border-radius: 8px;
@@ -39,7 +43,28 @@ section {
     gap: 30px;
 }
 
+#search-section>* {
+    width: 100%;
+    text-align: center;
+}
 
+.links-header {
+    text-align: center;
+}
+
+#links-container {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    font-size: 20pt;
+}
+
+#links-container>* {
+    width: 100%;
+    margin: auto;
+    font-size: 10pt;
+    font-family: "Source Code Pro";
+}
 
 button {
     background-color: #4d4d4d;
@@ -51,7 +76,7 @@ button {
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #FF4F00;
 }
 
 @media screen and (max-width: 1600px) {
