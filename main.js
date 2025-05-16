@@ -18,7 +18,20 @@ async function fetchWeather() {
     }
 }
 
+function activateGreeter() {
+    let el = document.getElementById("greeter")
+    const currentHour = new Date().getHours()
+    let TOD = ""
+    if (currentHour >= 0 && currentHour < 5) TOD = "Good Night!"
+    else if (currentHour >= 5 && currentHour < 12) TOD = "Good Morning!"
+    else if (currentHour >= 12 && currentHour < 17) TOD = "Good Afternoon!"
+    else if (currentHour >= 17 && currentHour < 20) TOD = "Good Evening!"
+    else if (currentHour >= 20 && currentHour < 24) TOD = "Good Night!"
+    el.innerHTML = TOD
+}
+
 window.onload = () => {
     document.getElementById('google-search-input').focus()
     fetchWeather()
+    activateGreeter()
 }
