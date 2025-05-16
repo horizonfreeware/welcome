@@ -31,7 +31,7 @@ function activateGreeter() {
 }
 
 window.onload = () => {
-    document.getElementById('google-search-input').focus()
+    //document.getElementById('google-search-input').focus()
     fetchWeather()
     activateGreeter()
 }
