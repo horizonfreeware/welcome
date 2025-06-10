@@ -46,22 +46,20 @@ section {
     display: flex;
     flex-direction: row;
     gap: 30px;
+    text-align: center;
 }
 
 input[type=text] {
     height: 28px;
-    padding-left: 10px;
     text-decoration: none;
     background-color: rgba(0, 0, 0, 0);
     background-repeat: repeat-x;
     border-radius: 5px;
     border: 1px solid #FF4F00;
     color: white;
-}
-
-#search-section>* {
-    width: 100%;
+    margin: 10px;
     text-align: center;
+    width: 50%;
 }
 
 .links-header {
@@ -89,13 +87,13 @@ input[type=text] {
 }
 
 button {
-    background-color: #4d4d4d;
+    background-color: #7a5b5b;
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    margin: 10px;
+    margin: auto;
 }
 
 button:hover {
@@ -118,5 +116,9 @@ button:hover {
     #search-section {
         flex-direction: column;
         gap: 30px;
+    }
+
+    #search-section>* {
+        width: 100%;
     }
 }

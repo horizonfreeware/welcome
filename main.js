@@ -29,8 +29,39 @@ function activateGreeter() {
     el.innerHTML = TOD
 }
 
+function search(param="google-search") {
+    let input = document.getElementById('search-input').value,
+        url = null
+
+
+    switch (param) {
+        case "google-search":
+            url = "https://www.google.com/search?q="
+            break
+        case "duckduckgo-search":
+            url = "https://www.duckduckgo.com/?q="
+            break
+        case "youtube-search":
+            url = "https://www.youtube.com/results?search_query="
+            break
+        case "reddit-search":
+            url = "https://www.reddit.com/search/?q="
+            break
+        default:
+            url = "https://www.google.com/search?q="
+            break
+    }
+    location.href = url + input
+}
+
 window.onload = () => {
-    //document.getElementById('google-search-input').focus()
+    let el = document.getElementById('search-input')
+    el.focus()
+    el.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            search()
+        }
+    })
     fetchWeather()
     activateGreeter()
 }
