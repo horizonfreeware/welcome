@@ -27,10 +27,15 @@ ul {
 section {
     backdrop-filter: blur(10px);
     padding: 20px;
-    background: rgba(63, 61, 75, .70);
+    background: rgba(63, 61, 75, .80);
     margin: 10px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: filter 300ms;
+    will-change: filter;
+}
+
+section:hover {
+    filter: drop-shadow(0 0 1em #FF4F00aa);
 }
 
 #content {
@@ -94,6 +99,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     margin: auto;
+    transition: background-color 300ms;
 }
 
 button:hover {
