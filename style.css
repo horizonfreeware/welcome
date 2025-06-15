@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background-image: url("castle.jpg");
-    background-size: cover;
+    background-size: auto;
     color: white;
     font-family: "Source Code Pro";
     margin: 40px 10%;
